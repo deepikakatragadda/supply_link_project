@@ -26,7 +26,7 @@ public class WarehouseController {
     @Autowired
     WarehouseServiceImplJpa warehouseServiceImplJpa;
 
-    @GetMapping
+        @GetMapping
     public ResponseEntity<List<Warehouse>> getAllWarehouses() throws SQLException {
         List<Warehouse> warehouses = warehouseServiceImplJpa.getAllWarehouses();
         return new ResponseEntity<>(warehouses, HttpStatus.OK);
